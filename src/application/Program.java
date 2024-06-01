@@ -35,5 +35,12 @@ public class Program {
 
         sellerDao.insert(sel);
         System.out.println("Id =" + sel.getId());
+
+        System.out.println("==== Test 5: seller update ====\n");
+        seller = sellerDao.findById(1);
+        seller.setName("Felipe Lourenço");
+        sellerDao.update(seller);
+
+        System.out.println("update completed");
     }
 }
